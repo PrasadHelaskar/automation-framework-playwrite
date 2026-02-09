@@ -15,4 +15,3 @@ class TestLoginFlow():
         login_page.click_submit()
 
         log.info("Login flow execution completed")
-        
