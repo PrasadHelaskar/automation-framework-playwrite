@@ -27,15 +27,13 @@ class Test_check_locator_logic():
         value="password",
         )
         base_page=BasePage(page)
-        try:
+
+        with pytest.raises(ValueError):
             base_page._locate_element(login_button)
-        
-        except ValueError as ve:
-            log.error("We got the value error: %s",ve)
     
     @pytest.mark.unit
-    def test_check_locator_logic_failed(self,page):
-        try:    
+    def test_check_locator_logic_failed(self,page):    
+        with pytest.raises(AttributeError):
             login_button = Locator(
             by=LocateBy.Test,
             value="password",
@@ -43,6 +41,3 @@ class Test_check_locator_logic():
 
             base_page=BasePage(page)
             base_page._locate_element(login_button)
-                    
-        except ValueError as ve:
-            log.error("We got the value error: %s",ve)
