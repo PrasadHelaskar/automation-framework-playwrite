@@ -10,3 +10,4 @@ pytest==9.0.2
 tomli==2.4.0
 typing_extensions==4.15.0
 pytest-html
+python-dotenv

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  self-heal-evening:
+  playwright-evening:
     name: Evening Playwright Stability Run
     runs-on: ubuntu-latest
     env:
@@ -29,6 +29,7 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt
+          playwright install 
 
       - name: Prepare artifact directories
         run: |
@@ -43,7 +44,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-regression-artifacts
+          name: pytest-report
           path: |
             logs/
             reports/
