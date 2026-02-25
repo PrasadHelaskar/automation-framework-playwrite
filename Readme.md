@@ -68,7 +68,7 @@ This project is intentionally treated as Version 1 and represents my transition 
 ├── utils/                # Common utilities (logger, helpers, base logic)
 ├── conftest.py           # Pytest fixtures and setup/teardown
 ├── pytest.ini            # Pytest configuration & markers
-├── requirements.txt      # Python dependencies
+├── requirements.txt      # Python dependencies 
 └── README.md             # Project documentation
 ```
 
